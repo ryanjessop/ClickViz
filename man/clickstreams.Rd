@@ -3,18 +3,19 @@
 \docType{data}
 \name{clickstreams}
 \alias{clickstreams}
-\title{Ryan's Sample Data}
+\title{Sample Clickstream Data}
 \format{
-An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.
+Data prepared for using the \code{"clickstream"} R package.
 }
 \usage{
 data(clickstreams)
 }
 \description{
-Data made up of clickstream with various states.
+Devised clickstream data to display the visualisations
+and show the interactions between the clickstream package.
 }
 \examples{
 mc <- fitMarkovChain(clickstreams)
 plot_transition_matrix(mc)
 }
-\keyword{datasets}
+\keyword{dataset}

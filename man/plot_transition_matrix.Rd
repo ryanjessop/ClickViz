@@ -7,12 +7,10 @@
 plot_transition_matrix(mc)
 }
 \arguments{
-\item{x}{A number.}
-
-\item{y}{A number.}
+\item{mc}{Fitted Markov chain}
 }
 \value{
-The sum of \code{x} and \code{y}.
+Heatmap of the transition matrix
 }
 \description{
 Builds a heatmap of the Markov chain transition matrix.

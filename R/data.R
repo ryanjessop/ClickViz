@@ -1,14 +1,15 @@
-#' Ryan's Sample Data
+#' Sample Clickstream Data
 #'
-#' Data made up of clickstream with various states.
+#' Devised clickstream data to display the visualisations
+#' and show the interactions between the clickstream package.
 #'
 #' @docType data
 #'
 #' @usage data(clickstreams)
 #'
-#' @format An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.
+#' @format Data prepared for using the \code{"clickstream"} R package.
 #'
-#' @keywords datasets
+#' @keywords dataset
 #'
 #' @examples
 #' mc <- fitMarkovChain(clickstreams)

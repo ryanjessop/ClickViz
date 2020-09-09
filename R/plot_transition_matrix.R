@@ -2,9 +2,8 @@
 #'
 #' Builds a heatmap of the Markov chain transition matrix.
 #'
-#' @param x A number.
-#' @param y A number.
-#' @return The sum of \code{x} and \code{y}.
+#' @param mc Fitted Markov chain
+#' @return Heatmap of the transition matrix
 #' @examples
 #' cls <- readClickstreams(file)
 #' mc <- fitMarkovChain(cls)
