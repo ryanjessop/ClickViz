@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ClickViz is to create interesting visusalitions of Markov chains using clickstream data.
+The goal of ClickViz is to create interesting visualisations of Markov chains using clickstream data.
 
 ## Installation
 
