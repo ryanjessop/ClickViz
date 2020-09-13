@@ -1,15 +1,15 @@
-#' Plot Markov chain transition matrix
+#' Plot transition matrix
 #'
-#' Builds a heatmap of the Markov chain transition matrix.
+#' Builds an interactive heatmap of the first order Markov chain transition matrix.
 #'
-#' @param mc Fitted Markov chain
+#' @param data Clickstream data
 #' @return Heatmap of the transition matrix
 #' @examples
 #' cls <- readClickstreams(file)
-#' mc <- fitMarkovChain(cls)
-#' plot_transition_matrix(mc)
-plot_transition_matrix <- function(mc){
+#' plot_transition_matrix(cls)
+plot_transition_matrix <- function(data){
 
+  mc <- clickstream::fitMarkovChain(data)
   matrix <- t(as.matrix(mc@transitions[[1]]))
 
   plotly::plot_ly(

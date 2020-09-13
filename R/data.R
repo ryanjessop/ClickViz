@@ -1,7 +1,6 @@
-#' Sample Clickstream Data
+#' Sample clickstream data
 #'
-#' Devised clickstream data to display the visualisations
-#' and show the interactions between the clickstream package.
+#' Devised clickstream data for examples of the visualisations.
 #'
 #' @docType data
 #'
@@ -12,6 +11,5 @@
 #' @keywords dataset
 #'
 #' @examples
-#' mc <- fitMarkovChain(clickstreams)
-#' plot_transition_matrix(mc)
+#' plot_transition_matrix(data)
 "clickstreams"

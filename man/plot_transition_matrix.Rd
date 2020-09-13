@@ -2,21 +2,20 @@
 % Please edit documentation in R/plot_transition_matrix.R
 \name{plot_transition_matrix}
 \alias{plot_transition_matrix}
-\title{Plot Markov chain transition matrix}
+\title{Plot transition matrix}
 \usage{
-plot_transition_matrix(mc)
+plot_transition_matrix(data)
 }
 \arguments{
-\item{mc}{Fitted Markov chain}
+\item{data}{Clickstream data}
 }
 \value{
 Heatmap of the transition matrix
 }
 \description{
-Builds a heatmap of the Markov chain transition matrix.
+Builds an interactive heatmap of the first order Markov chain transition matrix.
 }
 \examples{
 cls <- readClickstreams(file)
-mc <- fitMarkovChain(cls)
-plot_transition_matrix(mc)
+plot_transition_matrix(cls)
 }

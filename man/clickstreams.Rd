@@ -3,7 +3,7 @@
 \docType{data}
 \name{clickstreams}
 \alias{clickstreams}
-\title{Sample Clickstream Data}
+\title{Sample clickstream data}
 \format{
 Data prepared for using the \code{"clickstream"} R package.
 }
@@ -11,11 +11,9 @@ Data prepared for using the \code{"clickstream"} R package.
 data(clickstreams)
 }
 \description{
-Devised clickstream data to display the visualisations
-and show the interactions between the clickstream package.
+Devised clickstream data for examples of the visualisations.
 }
 \examples{
-mc <- fitMarkovChain(clickstreams)
-plot_transition_matrix(mc)
+plot_transition_matrix(data)
 }
 \keyword{dataset}
