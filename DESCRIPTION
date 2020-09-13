@@ -1,6 +1,6 @@
 Package: ClickViz
 Title: Clickstream Visualisations
-Version: 0.0.0.9020
+Version: 0.0.0.9021
 Authors@R: person("Ryan", "Jessop", email = "ryanjessop987@gmail.com",
            role = c("aut", "cre"))
 Description: Visualisations of Markov chains applied to clickstream data.

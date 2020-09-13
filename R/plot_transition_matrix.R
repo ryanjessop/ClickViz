@@ -1,4 +1,4 @@
-#' Plot transition matrix
+#' Plot transition heatmap
 #'
 #' Builds an interactive heatmap of the first order Markov chain transition matrix.
 #'
@@ -6,8 +6,8 @@
 #' @return Heatmap of the transition matrix
 #' @examples
 #' cls <- readClickstreams(file)
-#' plot_transition_matrix(cls)
-plot_transition_matrix <- function(data){
+#' plot_transition_heatmap(cls)
+plot_transition_heatmap <- function(data){
 
   mc <- clickstream::fitMarkovChain(data)
   matrix <- t(as.matrix(mc@transitions[[1]]))
