@@ -8,8 +8,7 @@
 #' @examples
 #' cls <- readClickstreams(file)
 #' create_transition_network(cls, vertex_labels)
-create_transition_network <- function(data, vertex_labels){
-
+create_transition_network <- function(data, vertex_labels) {
   edges <- prepare_network_edges(data)
   vertices <- prepare_network_vertices(data, vertex_labels)
 
