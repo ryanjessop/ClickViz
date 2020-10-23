@@ -2,7 +2,39 @@
 title: "Heatmap Visualisation"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Heatmap Visualisation}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
+
+```{r, include = FALSE}
+library(ggplot2)
+knitr::opts_chunk$set(fig.dpi = 96, collapse = TRUE, comment = "#>")
+```
+
+This vignette summarises the heatmap visualisation in the `ClickViz` package.  
+
+## Input Data
+
+The input data for the function `plot_transition_heatmap` will need to be in the following format. Similar to the `clickstreams` package, the data must be in the format of `clickstreams:readClickstream(file)`.
+
+    ```{r}
+    library(ClickViz)
+    clickstreams[1:5]
+    ```
+
+## Plot Transition Matrix
+
+The `plot_transition_heatmap` function calculates the Markov chain probabilities for the data provided. Then labels and colours are added to reflect the probbailites and plotted in an interactive heatmap.
+
+Examples of the heatmap visualisation of the first order Markov chain transition matrix:
+
+    ```{r}
+    library(ClickViz)
+    plot_transition_heatmap(clickstreams)
+    ```
+
+    ```{r}
+    library(ClickViz)
+    plot_transition_heatmap(clickstreams_large)
+    ```

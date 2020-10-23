@@ -42,8 +42,8 @@ vertex_labels_example <- tibble::tibble(state=state,
 edges <- prepare_network_edges(clickstreams, alpha=0.01)
 nodes <- prepare_network_vertices(clickstreams,
                                   vertex_labels=vertex_labels_example)
-plot_transition_network(test_edges,
-                        test_nodes,
+plot_transition_network(edges,
+                        nodes,
                         edge_width_factor=5,
                         edge_arrow_size=0.6,
                         edge_curve_factor=0.5,
@@ -55,7 +55,6 @@ plot_transition_network(test_edges,
 ![](images/network_ex1.png)
 
 ```r
-
 labels = c("Content", "Purchasing", "Content", "Products", "Artificial",
                 "Home", "Site Information", "Profile", "Products", "Artificial",
                 "Products", "Profile", "Purchasing", "Purchasing")
