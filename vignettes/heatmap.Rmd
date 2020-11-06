@@ -16,7 +16,9 @@ This vignette summarises the heatmap visualisation in the `ClickViz` package.
 
 ## Input Data
 
-The input data for the function `plot_transition_heatmap` will need to be in the following format. Similar to the `clickstreams` package, the data must be in the format of `clickstreams:readClickstream(file)`.
+The input data for the function `plot_transition_heatmap` will need to be in the following format. Similar to the `clickstreams` package, the data must be read using the following function `clickstreams:readClickstream(file)`.
+
+Example data is available in the package as follows:
 
     ```{r}
     library(ClickViz)
@@ -25,9 +27,9 @@ The input data for the function `plot_transition_heatmap` will need to be in the
 
 ## Plot Transition Matrix
 
-The `plot_transition_heatmap` function calculates the Markov chain probabilities for the data provided. Then labels and colours are added to reflect the probbailites and plotted in an interactive heatmap.
+The `plot_transition_heatmap` function calculates the Markov chain probabilities for the data provided. Axis labels and colour is added corresponding to the transition probabilities in an interactive heatmap.
 
-Examples of the heatmap visualisation of the first order Markov chain transition matrix:
+Here are examples of the heatmap visualisation of the first order Markov chain transition matrix, using data available in the package:
 
     ```{r}
     library(ClickViz)
