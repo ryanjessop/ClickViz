@@ -11,28 +11,35 @@ This vignette summarises the network visualisation in the `ClickViz` package.
 
 ## Input Data
 
-The input data for the function `prepare_network_edges` and `prepare_network_vertices` will need to be in the following format. Similar to the `clickstreams` package, the data must be in the format of `clickstreams:readClickstream(file)`.
+The input data for the function `prepare_network_edges` and `prepare_network_vertices` will need to be in the following format. Similar to the `clickstreams` package, the data must be read using the following function `clickstreams:readClickstream(file)`.
+
+Here is an example of the data format:
 
     ```{r}
     library(ClickViz)
     clickstreams[1:5]
     ```
 
-## Plot Transition Matrix
+In addition to the clickstream data, for the network visualisation a corresponding `tibble` dataframe will need to be provided with information regarding the pages. The labels will indicate that some pages are related, hence assigned the same colour in the network.   
 
-The `prepare_network_edges` function calculates the Markov chain probabilities for the data provided. 
-
-The `prepare_network_vertices` function calculates 
-
-Examples of the network visualisation of the first order Markov chain transition matrix:
-
-    ```{r}
+```{r}
     library(ClickViz)
     labels <- c("Type1", "Type2", "Type2", "Type3")
     state <- c("H", "P", "D", "E")
     vertex_labels_example <- tibble::tibble(state=state,
                                             vertex_label=labels)
-        
+```
+
+
+## Plot Transition Matrix
+
+The `prepare_network_edges` function calculates the Markov chain transition probabilities, where `alpha` is the minimum transition probability plotted. It finds which pages are connected and the direction of the transition from the data provided. The width and opacity of each edge in the network is proportional to the size of the probability.
+
+The `prepare_network_vertices` function calculates the size and colour of each node in the graph. The size is proportional to the frequency of the page in that data. The color relates to the page labels provided.
+
+Examples of the network visualisation of the first order Markov chain transition matrix:
+
+    ```{r}
     edges <- prepare_network_edges(clickstreams, alpha=0.01)
     nodes <- prepare_network_vertices(clickstreams,
                                       vertex_labels=vertex_labels_example)
@@ -45,6 +52,8 @@ Examples of the network visualisation of the first order Markov chain transition
                             legend_x_position=-3.0,
                             legend_y_position=-0.5)
     ```
+
+Here is a full example including an extra dataframe of page labels and large clickstream data sample in this package.
 
     ```{r}
     library(ClickViz)
