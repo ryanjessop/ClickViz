@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ClickViz is to create interesting visualisations of Markov chains using clickstream data. Clickstream data is collected from online browsing, where clicks provide a sequence page visits. We can use these plots to discover common behaviours on the website.
+The goal of ClickViz is to create interesting visualisations of Markov chains using clickstream data. Clickstream data is collected from online browsing, where clicks provide a sequence of page visits. We can use these plots to discover common behaviours and further insights into the usability of the website.
 
 ## Installation
 
